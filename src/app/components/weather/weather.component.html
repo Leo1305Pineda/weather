@@ -1,0 +1,18 @@
+<div class="p-4">
+  <label class="text-xl font-semibold text-gray-800">
+    <span style="color: var(--ion-color-secondary);">
+      {{ item.name }}, {{ item.sys.country }}
+      <img class="inline" [src]="item.sys.flag" />
+    </span>
+  </label>
+  <span class="inline p-2 font-bold">{{ item.weather_first.description }}</span>
+  <p><span class="badge badge-info">{{item.main.temp - factorXC | number : '1.2-2'}}°С </span>
+    {{ 'fields.main_temp' | translate }} {{ 'page.from' | translate }}
+    {{ item.main.temp_min - factorXC | number : '1.2-2'}} {{ 'page.to' | translate }}
+    {{ item.main.temp_max - factorXC | number : '1.2-2'}} °С,
+    {{ 'fields.wind' | translate }} {{item.wind.speed}} m/s. {{ 'fields.main_humidity' | translate }}
+    {{item.main.humidity}}%, {{item.main.sea_level}} hpa</p>
+  <p class="mt-4 text-sm text-gray-500">{{ 'fields.coord' | translate }} <span
+      style="color: var(--ion-color-secondary);">[{{
+      item.coord.lat }}, {{ item.coord.lon }}]</span></p>
+</div>

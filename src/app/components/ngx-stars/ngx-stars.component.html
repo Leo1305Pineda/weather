@@ -1,0 +1,7 @@
+
+<label *ngIf="title">{{ title }}</label>
+<div *ngIf="!isShort" [ngClass]="className || ''" fxLayout="row" fxLayoutAlign="start center" >
+  <div *ngFor="let star of stars" [ngClass]="[star.class]" (click)="selectStar(star.id, readonly)">
+      <ion-icon [name]="star.icon" [style.width]="width" [style.height]="height"></ion-icon>
+  </div>
+</div>

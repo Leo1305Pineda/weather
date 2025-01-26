@@ -1,0 +1,58 @@
+{
+  "page": {
+    "search": "Buscar",
+    "from": "Desde",
+    "to": "A",
+    "favorites": "Favoritos",
+    "history": "Historial"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés"
+  },
+  "fields": {
+    "name": "Nombre",
+    "favorite": "Favorito",
+    "coord": "Coordenadas",
+    "coord_lon": "Longitud",
+    "coord_lat": "Latitud",
+    "weather": "Clima",
+    "weather_main": "Nubes",
+    "weather_description": "Cielo despejado",
+    "weather_icon": "Icono",
+    "weather_firts_id": "ID del clima",
+    "weather_firts_main": "Condición principal",
+    "weather_firts_description": "Descripción",
+    "weather_firts_icon": "Icono",
+    "base": "Base",
+    "main": "Información principal",
+    "main_temp": "Temperatura",
+    "main_feels_like": "Sensación térmica",
+    "main_temp_min": "Temperatura mínima",
+    "main_temp_max": "Temperatura máxima",
+    "main_pressure": "Presión",
+    "main_humidity": "Humedad",
+    "main_sea_level": "Nivel del mar",
+    "main_grnd_level": "Nivel del suelo",
+    "visibility": "Visibilidad",
+    "wind": "Viento",
+    "wind_speed": "Velocidad del viento",
+    "wind_deg": "Dirección del viento",
+    "wind_gust": "Ráfaga de viento",
+    "clouds": "Nubes",
+    "clouds_all": "Cobertura nubosa",
+    "dt": "Fecha y hora",
+    "sys": "Sistema",
+    "sys_country": "País",
+    "sys_sunrise": "Amanecer",
+    "sys_sunset": "Atardecer",
+    "timezone": "Zona horaria",
+    "id": "ID de la ciudad",
+    "cod": "Código de respuesta"
+  },
+  "messages": {
+    "without_records": "Sin resultado para la busqueda",
+    "hsitory_records": "Busquedas anteriores"
+  }
+}

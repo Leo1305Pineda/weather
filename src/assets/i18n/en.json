@@ -1,0 +1,58 @@
+{
+  "page": {
+      "search": "Search",
+      "from": "From",
+      "to": "To",
+      "favorites": "Favorites",
+      "history": "History"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French"
+  },
+  "fields": {
+    "name": "Name",
+    "favorite": "Favorite",
+    "coord": "Geo coords",
+    "coord_lon": "Longitude",
+    "coord_lat": "Latitude",
+    "weather": "Weather",
+    "weather_main": "Clouds",
+    "weather_description": "Clear sky",
+    "weather_icon": "Icon",
+    "weather_firts_id": "Weather ID",
+    "weather_firts_main": "Main condition",
+    "weather_firts_description": "Description",
+    "weather_firts_icon": "Icon",
+    "base": "Base",
+    "main": "Main Information",
+    "main_temp": "Temperature",
+    "main_feels_like": "Feels Like",
+    "main_temp_min": "Min Temperature",
+    "main_temp_max": "Max Temperature",
+    "main_pressure": "Pressure",
+    "main_humidity": "Humidity",
+    "main_sea_level": "Sea Level",
+    "main_grnd_level": "Ground Level",
+    "visibility": "Visibility",
+    "wind": "Wind",
+    "wind_speed": "Wind Speed",
+    "wind_deg": "Wind Direction",
+    "wind_gust": "Wind Gust",
+    "clouds": "Clouds",
+    "clouds_all": "Cloud Cover",
+    "dt": "Date and Time",
+    "sys": "System",
+    "sys_country": "Country",
+    "sys_sunrise": "Sunrise",
+    "sys_sunset": "Sunset",
+    "timezone": "Timezone",
+    "id": "City ID",
+    "cod": "Response Code"
+  },
+  "messages": {
+    "without_records": "No result for the search",
+    "hsitory_records": "Previous searches"
+  }
+}

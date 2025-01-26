@@ -1,0 +1,50 @@
+{
+  "page": {
+    "search": "Chercher"
+  },
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français"
+  },
+  "fields": {
+    "name": "Nom",
+    "favorite": "Favori",
+    "coord": "Coordonnées",
+    "coord_lon": "Longitude",
+    "coord_lat": "Latitude",
+    "weather": "Clima",
+    "weather_main": "Nuages",
+    "weather_description": "Ciel dégagé",
+    "weather_icon": "Icône",
+    "weather_firts_id": "ID du temps",
+    "weather_firts_main": "Condition principale",
+    "weather_firts_description": "Description",
+    "weather_firts_icon": "Icône",
+    "base": "Base",
+    "main": "Informations principales",
+    "main_temp": "Température",
+    "main_feels_like": "Ressenti",
+    "main_temp_min": "Température minimale",
+    "main_temp_max": "Température maximale",
+    "main_pressure": "Pression",
+    "main_humidity": "Humidité",
+    "main_sea_level": "Niveau de la mer",
+    "main_grnd_level": "Niveau du sol",
+    "visibility": "Visibilité",
+    "wind": "Vents",
+    "wind_speed": "Vitesse du vent",
+    "wind_deg": "Direction du vent",
+    "wind_gust": "Rafale de vent",
+    "clouds": "Nuages",
+    "clouds_all": "Couverture nuageuse",
+    "dt": "Date et heure",
+    "sys": "Système",
+    "sys_country": "Pays",
+    "sys_sunrise": "Lever du soleil",
+    "sys_sunset": "Coucher du soleil",
+    "timezone": "Fuseau horaire",
+    "id": "ID de la ville",
+    "cod": "Code de réponse"
+  }
+}

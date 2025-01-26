@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <app-header>
+    </app-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="text-center p2 font-bold">
+    {{ 'page.favorites' | translate }}
+  </div>
+  <ion-toggle labelPlacement="start" [(ngModel)]="isTable">
+    {{ isTable ? 'Vista en lista' : 'Vista en tabla'}}
+  </ion-toggle>
+  @if(!isTable) {
+  <div (click)="selectWeather(item)" *ngFor="let item of weathers"
+    class="bg-white border rounded-lg shadow-md overflow-hidden">
+    <app-weather [item]="item"></app-weather>
+  </div>
+  } @else {
+  <app-table-weathers [weathers]="weathers"></app-table-weathers>
+  }
+</ion-content>

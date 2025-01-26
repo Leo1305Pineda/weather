@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <app-header>
+    </app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-item (click)="openSearhWeather()">
+    <ion-icon name="search"></ion-icon><ion-title>{{current_weather.name}}</ion-title>
+  </ion-item> -->
+  <div class="search">
+    <app-search-weather></app-search-weather>
+  </div>
+
+  <div class="flex items-center justify-center">
+    <div class="flex flex-col bg-white rounded p-4 w-full max-w-xs">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-2">
+          <div class="font-bold text-xl">{{current_weather.name}}</div>
+          <div class="text-sm text-gray-500">{{ current_weather.date.lang(lang).format('LLL') }}</div>
+        </div>
+        <ngx-stars class="c-start" (onSelect)="onSelectFavorite()" [value]="current_weather.favorite ? 1 : 0" [maxLength]="1"></ngx-stars>
+      </div>
+
+
+      <div *ngFor="let item of current_weather?.weather"
+        class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
+        <img [src]="'https://openweathermap.org/img/wn/' + item.icon + '@2x.png'" />
+      </div>
+      <div class="flex flex-row items-center justify-center mt-6">
+        <div class="font-medium text-6xl">{{current_weather.main.temp - factorXC | number : '1.2-2'}}°</div>
+        <div class="flex flex-col items-center ml-6">
+          <div class="mt-1">
+            <span class="text-sm"><i class="far fa-long-arrow-up"></i></span>
+            <span class="text-sm font-light text-gray-500">{{current_weather.main.temp_min - factorXC | number :
+              '1.2-2'}}°C</span>
+          </div>
+          <div>
+            <span class="text-sm"><i class="far fa-long-arrow-down"></i></span>
+            <span class="text-sm font-light text-gray-500">{{current_weather.main.temp_max - factorXC | number :
+              '1.2-2'}}°C</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between mt-6">
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">{{ 'fields.wind' | translate }}</div>
+          <div class="text-sm text-gray-500">{{current_weather.wind.speed}} m/s</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">{{ 'fields.main_humidity' | translate }}</div>
+          <div class="text-sm text-gray-500">{{ current_weather.main.humidity }}%</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">{{ 'fields.visibility' | translate }}</div>
+          <div class="text-sm text-gray-500">{{current_weather.visibility / 1000}}km</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,29 +1,38 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" when="(min-width: 640px)">
     <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar style="--background: var(--ion-color-primary);height: 64px;">
+          <div class="flex flex-1 items-center justify-center">
+            <div class="h-1/4 flex shrink-0 items-center">
+              <img class="h-8 w-auto" src="assets/logo_white_cropped.png" alt="Your Company">
+            </div>
+          </div>
+        </ion-toolbar>
+      </ion-header>
+
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi&#64;ionicframework.com</ion-note>
 
           @for (p of appPages; track p; let i = $index) {
-            <ion-menu-toggle auto-hide="false">
-              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-                <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
-              </ion-item>
-            </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
           }
         </ion-list>
 
-        <ion-list id="labels-list">
+        <ion-list id="labels-list" *ngIf="labels.length">
           <ion-list-header>Labels</ion-list-header>
 
           @for (label of labels; track label) {
-            <ion-item lines="none">
-              <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
-            </ion-item>
+          <ion-item lines="none">
+            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
           }
         </ion-list>
       </ion-content>

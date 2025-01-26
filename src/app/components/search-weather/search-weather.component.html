@@ -1,0 +1,18 @@
+<ion-searchbar [formControl]="control" [debounce]="500" [placeholder]="'page.search' | translate"></ion-searchbar>
+<div class="bg-white right-0 left-0 h-auto fixed overflow-y-auto" style="z-index: 1;">
+  <div (click)="selectWeather(item)" *ngFor="let item of weathers"
+    class="bg-white border rounded-lg shadow-md overflow-hidden">
+    <app-weather [item]="item"></app-weather>
+  </div>
+  <div class="bg-white" *ngIf="weathers?.length == 0 && control.value.length > 0">
+    <label class="ml-2 text-red-500">{{ 'messages.without_records' | translate }}</label>
+    <p class="ml-2">{{ 'messages.hsitory_records' | translate }}</p>
+    <div (click)="selectWeather(item)" *ngFor="let item of search_weathers"
+      class="bg-white m-2 border rounded-lg shadow-md overflow-hidden">
+      <div class="p-2">
+        {{ item.name }}, {{ item.sys.country }}
+      </div>
+    </div>
+  </div>
+
+</div>
