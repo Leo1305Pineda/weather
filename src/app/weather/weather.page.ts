@@ -14,10 +14,9 @@ import { FACTOR_X_C, LANGS, PATH } from '../services/constants';
 import { WeatherData } from '../entities/weather-data/weather-data';
 import { NgxStarsComponent } from '../components/ngx-stars/ngx-stars.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 const ION_IMPORTS = [
   IonContent, IonHeader, IonToolbar
-  //, IonIcon
-  //, IonItem
 ];
 
 @Component({
@@ -49,6 +48,7 @@ export class WeatherPage implements OnInit {
     private modalCtrl: ModalController,
     private storageService: StorageService,
     private weatherService: WeatherService,
+    private sanitizer: DomSanitizer
   ) {
     addIcons({ search })
   }
