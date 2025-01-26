@@ -62,7 +62,6 @@ export class WeatherPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.storageService.get(PATH.CURRENT_WATHER))
     this.current_weather = new WeatherData(this.storageService.get(PATH.CURRENT_WATHER));
     this.storageService.onChange.subscribe(({ key }) => {
       if (key === PATH.CURRENT_WATHER) {
